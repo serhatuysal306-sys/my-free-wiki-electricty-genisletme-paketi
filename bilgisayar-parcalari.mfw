@@ -1,0 +1,304 @@
+{
+ "format": "MyFreeWiki",
+ "version": 1,
+ "title": "Bilgisayar Parçaları Nasıl Kullanılır?",
+ "subtitle": "Parçaları tanıma, takma, bağlama ve ilk açılış · Ayrıntılı rehber",
+ "suggest": [
+  "Anakart",
+  "İşlemci",
+  "RAM",
+  "Ekran kartı",
+  "SSD",
+  "Güç kaynağı",
+  "BIOS",
+  "Termal macun",
+  "Statik elektrik",
+  "Kablo bağlantıları"
+ ],
+ "sections": [
+  {
+   "id": "ozet",
+   "title": "Başlamadan Önce",
+   "lead": "Güvenlik ve hazırlık.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Çalışma ortamı",
+     "tag": "",
+     "text": "Düz, temiz ve iyi aydınlatılmış bir masa seçin. Kasayı ve parçaları kendi kutularından çıkarmadan önce kutularının dolu olup olmadığını ve eksik parça bulunup bulunmadığını kontrol edin.||Kablo ve vidaları küçük bir kapta toplayın. Parçaların hangi kutuda olduğunu not almak işi kolaylaştırır.",
+     "keywords": "çalışma ortamı masa hazırlık vida kutu"
+    },
+    {
+     "title": "Statik elektrikten korunma",
+     "tag": "ESD",
+     "text": "Vücudunuzda biriken statik elektrik, bilgisayar parçalarını kalıcı olarak bozabilir. Parçalara dokunmadan önce metal bir yüzeye (kasanın metal gövdesi gibi) dokunarak yükünüzü boşaltın.||Parçaları yalnızca kenarlarından tutun; işlemci kontaklarına, RAM altın bağlantılarına ve kartın devre yollarına dokunmayın.",
+     "keywords": "statik elektrik esd topraklama kenar tutma altın kontak"
+    },
+    {
+     "title": "Güç ve bağlantı güvenliği",
+     "tag": "",
+     "text": "Montaja başlamadan önce bilgisayarı kapatın, güç kablosunu prizden çekin ve güç anahtarına birkaç saniye basarak kalan elektriği boşaltın.||Güç kaynağının arka anahtarını (0/I) kapalı konuma getirin. Takma işlemi sırasında elektrik verilmediğinden emin olun.",
+     "keywords": "güvenlik güç kablosu priz kapatma kalan elektrik anahtar"
+    },
+    {
+     "title": "Gerekli araçlar",
+     "tag": "",
+     "text": "Çoğu montaj için bir Phillips (+) tornavida yeterlidir. Ayrıca termal macun, kablo bağlama bantları, bir fırça veya basınçlı hava (temizlik için) ve kalem-kâğıt (bağlantıları not etmek için) faydalıdır.",
+     "keywords": "araç tornavida phillips termal macun fırça basınçlı hava"
+    }
+   ]
+  },
+  {
+   "id": "parcalar",
+   "title": "Parçaları Tanıma",
+   "lead": "Hangi parça ne işe yarar?",
+   "type": "n",
+   "items": [
+    {
+     "title": "Anakart (motherboard)",
+     "tag": "",
+     "text": "Tüm parçaların bağlandığı ana karttır. İşlemci yuvası (soket), RAM yuvaları, PCIe yuvaları, M.2 yuvaları, SATA portları ve arka panel bağlantıları üzerindedir.||Anakart üreticisi ve modeli, hangi işlemciyi ve belleği destekleyeceğinizi belirler.",
+     "keywords": "anakart motherboard soket ram yuva pcie m.2 sata arka panel"
+    },
+    {
+     "title": "İşlemci (CPU)",
+     "tag": "",
+     "text": "Bilgisayarın hesaplama birimidir. Anakartın soketine takılır ve üzerine soğutucu monte edilir.||Soket tipi (örn. Intel LGA ya da AMD AM5) işlemci ile anakartın uyumlu olması için mutlaka kontrol edilmelidir.",
+     "keywords": "işlemci cpu soket intel amd lga am5 uyum"
+    },
+    {
+     "title": "RAM (bellek)",
+     "tag": "",
+     "text": "Çalışan programların ve verilerin geçici olarak saklandığı bellektir. Kapasite (GB) ve hız (MHz) önemlidir. DDR4 ve DDR5 gibi türleri birbirine takılamaz.||RAM’ler genellikle çiftli (dual channel) kullanılır; uygun yuvalara (anakart kılavuzunda gösterilen) takılmaları performansı artırır.",
+     "keywords": "ram bellek ddr4 ddr5 mhz gb dual channel kanal"
+    },
+    {
+     "title": "Ekran kartı (GPU)",
+     "tag": "",
+     "text": "Görüntü ve grafik işlemleri için kullanılan karttır. Anakartta bir PCIe x16 yuvasına takılır. Büyük ekran kartları ek güç kablosu (6+2 pin gibi) gerektirebilir.",
+     "keywords": "ekran kartı gpu pcie x16 güç kablosu grafik"
+    },
+    {
+     "title": "Depolama: SSD ve HDD",
+     "tag": "",
+     "text": "HDD, dönen disk tabanlı, ucuz ve büyük kapasiteli depolamadır. SSD ise elektronik hafızaya dayanır; daha hızlıdır ve sessizdir.||SATA SSD ve HDD veri kablosu ile bağlanır. M.2 SSD doğrudan anakartın M.2 yuvasına takılır ve bir vida ile sabitlenir.",
+     "keywords": "depolama ssd hdd sata m.2 veri kablosu vida"
+    },
+    {
+     "title": "Güç kaynağı (PSU)",
+     "tag": "",
+     "text": "Tüm parçalara elektrik sağlar. Watt değeri, sistemin ihtiyacını karşılayacak kadar yüksek olmalıdır; ekran kartı kullanıyorsanız bu önemlidir.||Modüler güç kaynaklarında yalnızca kullanacağınız kablolar takılır; bu kasa içini düzenli tutar.",
+     "keywords": "güç kaynağı psu watt modüler kablo"
+    },
+    {
+     "title": "Kasa (case)",
+     "tag": "",
+     "text": "Parçaları barındıran metal veya plastik gövdedir. Anakart standı (dipçik) ve vida delikleri, anakartın doğru boyutta olduğunu gösterir.",
+     "keywords": "kasa case gövde dipçik anakart boyut"
+    },
+    {
+     "title": "Soğutma (fan ve sıvı soğutma)",
+     "tag": "",
+     "text": "İşlemci ve ekran kartı ısınır; bu nedenle hava soğutucu veya sıvı soğutma kullanılır. Kasa fanları hava akışını sağlar; genellikle ön ve alt girişten hava alıp arka ve üstten dışarı vermek iyi bir düzendir.",
+     "keywords": "soğutma fan sıvı soğutma hava akışı ısı"
+    }
+   ]
+  },
+  {
+   "id": "montaj",
+   "title": "Adım Adım Montaj",
+   "lead": "Genel sıralama: önce anakart, sonra kasa ve kablolar.",
+   "type": "n",
+   "items": [
+    {
+     "title": "1. Anakartı hazırlama",
+     "tag": "",
+     "text": "Anakartı, kutusundaki bir yüzey üzerinde veya kasa dışında tutarak çalışın. Anakartla birlikte gelen G/Ç (I/O) kalkanını, arka panel boşluğuna takın.||Kasanın içine dipçikleri (standoff) anakartın vida deliklerine denk gelecek şekilde yerleştirin.",
+     "keywords": "anakart hazırlık io kalkan dipçik standoff"
+    },
+    {
+     "title": "2. İşlemciyi takma",
+     "tag": "",
+     "text": "Soketin kolunu açın. İşlemci üzerindeki üçgen işaretini, soketteki üçgenle hizalayın. Ardından işlemciyi hiç zorlamadan yerine oturtun; sadece kendi ağırlığıyla yerine yerleşmelidir.||Kolu kapatıp sabitleyin. Intel işlemcilerde, pin bulunmayan kenarlardan ve çentiklerden hizalamayı kontrol edin.",
+     "keywords": "işlemci takma üçgen hizalama soket kol zorlama"
+    },
+    {
+     "title": "3. Termal macunu uygulama",
+     "tag": "",
+     "text": "İşlemcinin üstüne küçük, bezelye büyüklüğünde bir damla termal macun koyun. Soğutucu yerleştirildiğinde macun kendisi yayılır.||Çok fazla macun, işlemci kenarlarından taşarak anakarta zarar verebilir. Soğutucunun kutusunda ön uygulanmış macun varsa ayrıca macun sürmeyin.",
+     "keywords": "termal macun damla bezelye ön uygulanmış taşma"
+    },
+    {
+     "title": "4. Soğutucuyu takma",
+     "tag": "",
+     "text": "Soğutucuyu soketin montaj noktalarına göre yerleştirin ve kılavuzda belirtilen sırayla (çapraz) vidaları sıkın. Her vidayı birden fazla tur çevirerek eşit baskı oluşturun.",
+     "keywords": "soğutucu montaj vida çapraz sıra baskı"
+    },
+    {
+     "title": "5. RAM’i takma",
+     "tag": "",
+     "text": "Yuvanın iki ucundaki tırnakları açın. RAM’in çentiğini yuvanın çıkıntısıyla hizalayın ve her iki ucuna eşit bastırarak yerine oturtun; tırnaklar kendiliğinden kapanmalıdır.||Dual channel için, anakart kılavuzundaki önerilen yuva çiftlerini kullanın.",
+     "keywords": "ram takma çentik tırnak dual channel yuva kılavuz"
+    },
+    {
+     "title": "6. M.2 SSD’yi takma",
+     "tag": "",
+     "text": "M.2 yuvasının vidasını çıkarın, SSD’yi açılı şekilde yuvaya yerleştirin ve yaklaşık 30 derece açıyla bastırın. Ardından vidayı takarak SSD’yi sabitleyin.||Kılavuzda belirtilen yuvayı seçmek, bazı anakartlarda diğer SATA portlarını devre dışı bırakmayı önleyebilir.",
+     "keywords": "m.2 ssd takma açılı vida yuva sata devre dışı"
+    },
+    {
+     "title": "7. Anakartı kasaya yerleştirme",
+     "tag": "",
+     "text": "Anakartı arka panel boşluğuna dikkatlice yerleştirin. Vida deliklerini dipçiklerle hizalayıp vidaları takın; her vidayı çok sıkmayın, anakart hafifçe oynamamalıdır ama bükülmemelidir.",
+     "keywords": "anakart kasa yerleştirme dipçik vida bükülme arka panel"
+    },
+    {
+     "title": "8. Güç kaynağını yerleştirme",
+     "tag": "",
+     "text": "Güç kaynağını kasaya vidalayın. Kasanın fan yönünü ve hava akışını dikkate alarak yerleştirin; genellikle fan aşağı veya dışarı bakmalıdır.",
+     "keywords": "güç kaynağı yerleştirme fan yönü hava akışı"
+    },
+    {
+     "title": "9. Ekran kartını takma",
+     "tag": "",
+     "text": "Kasanın arkasındaki genişleme yuvası kapağını çıkarın. Ekran kartını PCIe x16 yuvasına bastırın; tırnak kapanmalı ve kart düz durmalıdır. Kartı kasaya vidalayın.||Ek güç kablosunu ekran kartına takın.",
+     "keywords": "ekran kartı pcie x16 tırnak vida güç kablosu takma"
+    }
+   ]
+  },
+  {
+   "id": "baglanti",
+   "title": "Kablo Bağlantıları",
+   "lead": "Hangi kablo nereye takılır?",
+   "type": "n",
+   "items": [
+    {
+     "title": "Ana güç (24 pin)",
+     "tag": "",
+     "text": "Güç kaynağının 24 pinli ana kablosu anakartın büyük güç yuvasına takılır. Tırnaklı uç tek yönde oturur; zorlamayın.",
+     "keywords": "24 pin ana güç anakart tırnak yön"
+    },
+    {
+     "title": "İşlemci gücü (EPS, 8 pin)",
+     "tag": "",
+     "text": "Anakartın üst kısmındaki 8 pinli (bazı kartlarda 4+4 pin) işlemci güç yuvasına takılır. İşlemciye güç vermek için bağlanması zorunludur.",
+     "keywords": "eps 8 pin 4+4 işlemci güç kablosu"
+    },
+    {
+     "title": "Ön panel bağlantıları",
+     "tag": "",
+     "text": "Güç düğmesi, reset, USB ve ses jakı kabloları anakartın ön panel başlıklarına takılır. Kılavuzdaki etiketleri (PWR_SW, RESET, HDD LED gibi) kontrol edin.||Kutuplu olanlarda (LED’ler gibi) artı ve eksi yönlerine dikkat edin; yanlış takmak bir şeyi bozmaz, sadece çalışmaz.",
+     "keywords": "ön panel power reset led kutup usb ses başlık"
+    },
+    {
+     "title": "SATA veri ve güç kabloları",
+     "tag": "",
+     "text": "SATA veri kablosu bir ucu anakarta, diğer ucu sürücüye takılır. Güç kablosu sürücüye güç verir. Bu kablolar sürücü ile anakart arasındaki bağlantıyı sağlar.",
+     "keywords": "sata veri kablosu güç kablosu sürücü hdd ssd"
+    },
+    {
+     "title": "PCIe güç kabloları",
+     "tag": "",
+     "text": "Ekran kartının güç girişine güç kaynağından gelen PCIe kablosu takılır. Kablonun uçları karttaki yuvaya tam oturmalıdır.",
+     "keywords": "pcie güç kablosu ekran kartı yuva"
+    },
+    {
+     "title": "Düzenli kablo yönetimi",
+     "tag": "",
+     "text": "Kablolar kasanın arkasındaki kablo kanallarından geçirilir ve bağlama bantlarıyla toplanır. Düzgün kablo yönetimi hava akışını artırır ve bakımı kolaylaştırır.",
+     "keywords": "kablo yönetimi bağlama bandı hava akışı bakım kanal"
+    }
+   ]
+  },
+  {
+   "id": "ilk",
+   "title": "İlk Açılış ve Kurulum",
+   "lead": "Bilgisayarı ilk kez çalıştırmak.",
+   "type": "n",
+   "items": [
+    {
+     "title": "İlk kontrol",
+     "tag": "",
+     "text": "Güç kablosunu takmadan önce tüm bağlantıları bir kez daha kontrol edin. Ekran kablosunu doğru porta (ekran kartı veya anakart) takın.||Güç düğmesine basın. Fan dönmeli, anakart LED’leri yanmalı ve ekranda bir görüntü belirmelidir.",
+     "keywords": "ilk açılış kontrol ekran kablosu port fan led"
+    },
+    {
+     "title": "Bip sesleri",
+     "tag": "",
+     "text": "Açılışta BIOS, sorun varsa bip sesleri verebilir. Tek bip normal açılış anlamına gelir. Sürekli veya farklı bip dizileri genellikle RAM, ekran kartı veya işlemci bağlantısıyla ilgilidir; anakart kılavuzundaki bip kodu tablosuna bakın.",
+     "keywords": "bip sesi açılış sorun ram ekran kartı kod tablosu"
+    },
+    {
+     "title": "BIOS / UEFI ayarları",
+     "tag": "",
+     "text": "Açılışta DEL veya F2 tuşuna basarak BIOS/UEFI menüsüne girilir (anakarta göre değişir). Burada tarih-saat, önyükleme sırası ve bellek profilleri ayarlanır.||RAM’in etiket hızında çalışması için XMP (Intel) veya EXPO/DOCP (AMD) profilini etkinleştirin.",
+     "keywords": "bios uefi del f2 xmp expo docp ram hız önyükleme"
+    },
+    {
+     "title": "İşletim sistemi kurulumu",
+     "tag": "",
+     "text": "Windows veya Linux kurulum USB’sini takın ve açılışta önyükleme (boot) menüsünden USB’yi seçin. Kurulum sırasında hedef olarak SSD’yi seçip biçimlendirin.||Kurulum bittikten sonra anakart, ekran kartı ve ağ sürücülerini üreticinin web sitesinden indirip kurun.",
+     "keywords": "işletim sistemi kurulum usb boot windows linux sürücü"
+    }
+   ]
+  },
+  {
+   "id": "bakim",
+   "title": "Bakım ve Sorun Giderme",
+   "lead": "Bilgisayarı uzun süre sağlıklı tutmak.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Toz temizliği",
+     "tag": "",
+     "text": "Tozlanma fanları ve soğutucuları tıkar, ısınmaya yol açar. Basınçlı hava ile fanların ve kasa filtrelerinin tozunu alın; fanları pervanesini sabitleyerek döndürmeyin.",
+     "keywords": "toz temizlik basınçlı hava fan filtre ısınma"
+    },
+    {
+     "title": "Sık görülen sorunlar",
+     "tag": "",
+     "text": "Hiç görüntü yoksa RAM’leri yerinden çıkarıp tekrar takın ve ekran kablosunu kontrol edin. Sık kapanma veya yüksek sıcaklık için soğutucu montajı ve termal macunu gözden geçirin.||Bağlantılar gevşek olabilir; güç ve SATA kablolarının tam oturduğundan emin olun.",
+     "keywords": "sorun görüntü yok ram kapanma sıcaklık gevşek bağlantı"
+    },
+    {
+     "title": "Ne zaman yardım almalı?",
+     "tag": "",
+     "text": "Parçalardan biri yanmış kokusu veriyor, hasarlı görünüyorsa veya kapasitörlerde şişme varsa çalıştırmayın. Garantisi olan parçaları kendiniz açmak yerine servise götürün.",
+     "keywords": "yardım servis garanti yanık koku şişme kapasitör"
+    }
+   ]
+  },
+  {
+   "id": "sss",
+   "title": "Sık Sorulan Sorular",
+   "lead": "Kısa ve net cevaplar.",
+   "type": "f",
+   "items": [
+    {
+     "title": "Bilgisayarı kurmak için uzman olmak gerekir mi?",
+     "tag": "",
+     "text": "Hayır. Bu wikideki sıraya uyar, kılavuzu okur ve parçaları zorlamazsanız, temel bir masaüstü bilgisayarı kendiniz kurabilirsiniz.",
+     "keywords": "uzman gerekli mi kurulum kolay"
+    },
+    {
+     "title": "RAM’i hangi yuvaya takmalıyım?",
+     "tag": "",
+     "text": "Anakart kılavuzundaki A2 ve B2 gibi önerilen yuvaları kullanın. Genellikle iki RAM takıldığında bunlar ayrı kanallarda olur.",
+     "keywords": "ram yuva a2 b2 kanal kılavuz"
+    },
+    {
+     "title": "İşlemciyi ters takarsam ne olur?",
+     "tag": "",
+     "text": "Üçgen işaretini hizalamadan işlemciyi zorlamak pinleri veya kontakları bozabilir. İşlemci kendi ağırlığıyla oturmuyorsa zorlamayın, tekrar hizalayın.",
+     "keywords": "işlemci ters takma zorlama pin üçgen"
+    },
+    {
+     "title": "Sisteme elektrik gelmiyor, ne yapmalıyım?",
+     "tag": "",
+     "text": "Priz, güç kablosu ve güç kaynağının arka anahtarını kontrol edin. 24 pinli ve 8 pinli kabloların tam oturduğundan emin olun.",
+     "keywords": "elektrik gelmiyor priz güç kablosu anahtar 24 pin 8 pin"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,364 @@
+{
+ "format": "MyFreeWiki",
+ "version": 1,
+ "title": "Elektronik Temelleri",
+ "subtitle": "Gerilim, akım, direnç ve temel bileşenler · Başlangıç rehberi",
+ "suggest": [
+  "Ohm yasası",
+  "Direnç",
+  "Kondansatör",
+  "Diyot",
+  "LED",
+  "Transistör",
+  "Multimetre",
+  "Lehim",
+  "Entegre",
+  "Renk kodu"
+ ],
+ "sections": [
+  {
+   "id": "ozet",
+   "title": "Kısaca Elektronik",
+   "lead": "Önce temel kavramlar.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Elektronik nedir?",
+     "tag": "",
+     "text": "Elektronik, elektrik akımını kontrol ederek bilgi işleyen, ölçen ve dönüştüren devreleri inceleyen bilim ve uygulama alanıdır.||Bir elektronik devre; kaynak (pil, adaptör), bileşenler ve bunları birbirine bağlayan iletkenlerden oluşur.",
+     "keywords": "elektronik devre kaynak bileşen tanım"
+    },
+    {
+     "title": "Güvenlik önce gelir",
+     "tag": "",
+     "text": "Devreye enerji vermeden önce bağlantıları kontrol edin. Şebeke gerilimiyle (220 V) çalışmak tehlikelidir; bu işleri yetkin bir kişi yapmalıdır.||Kondansatörler kapatıldıktan sonra bile yük tutabilir. Pil ve adaptör bağlarken kutupları (+/−) mutlaka kontrol edin.",
+     "keywords": "güvenlik tehlike şebeke 220 kutup kondansatör"
+    },
+    {
+     "title": "Nasıl okunur?",
+     "tag": "",
+     "text": "Bu wikide her kavram kısa bir açıklama ile başlar. Üstteki arama kutusuna bir kelime yazarak tüm bölümlerde arama yapabilirsiniz; bulunan kelimeler sarı işaretlenir.",
+     "keywords": "nasıl kullanılır arama yardım"
+    }
+   ]
+  },
+  {
+   "id": "temel",
+   "title": "Temel Kavramlar",
+   "lead": "Her devrenin dayandığı üç büyüklük.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Gerilim (Volt, V)",
+     "tag": "V",
+     "text": "İki nokta arasındaki elektriksel potansiyel farkıdır. Suyun yükseklik farkına benzetilir: yükseklik farkı ne kadar büyükse su o kadar hızlı akar.",
+     "keywords": "gerilim volt potansiyel su benzetme"
+    },
+    {
+     "title": "Akım (Amper, A)",
+     "tag": "A",
+     "text": "Birim zamanda iletkenin kesitinden geçen yük miktarıdır. Borudan akan suyun miktarına benzetilir.||Devreden geçen akım, bileşenlerin dayanabileceği değerleri aşmamalıdır; aşarsa ısınır ve zarar görürler.",
+     "keywords": "akım amper yük boru ısınma"
+    },
+    {
+     "title": "Direnç (Ohm, Ω)",
+     "tag": "Ω",
+     "text": "Akıma karşı gösterilen zorluktur. Borudaki daralmaya benzetilebilir. Dirençler akımı sınırlamak ve gerilimi bölmek için kullanılır.",
+     "keywords": "direnç ohm omega sınırlama bölme"
+    },
+    {
+     "title": "Ohm yasası",
+     "tag": "V = I × R",
+     "text": "Gerilim, akım ile direncin çarpımına eşittir: V = I × R. Buradan akım I = V / R ve direnç R = V / I bulunur.||Örnek: 9 V’luk bir pile 300 Ω’luk bir direnç bağlanırsa devreden 9 / 300 = 0,03 A (30 mA) akar.",
+     "keywords": "ohm yasası formül v i r hesap 9 volt 300 ohm"
+    },
+    {
+     "title": "Güç (Watt, W)",
+     "tag": "P = V × I",
+     "text": "Bir bileşenin birim zamanda harcadığı veya ürettiği enerjidir. P = V × I formülüyle hesaplanır.||Bir direncin dayanabileceği güç, wattla belirtilir (örn. 1/4 W). Hesaplanan gücü aşan bir direnç ısınıp bozulabilir.",
+     "keywords": "güç watt p vi hesap 1/4 w"
+    },
+    {
+     "title": "Doğru akım ve alternatif akım",
+     "tag": "",
+     "text": "DC (doğru akım) tek yönde akar; piller ve USB girişleri DC’dir. AC (alternatif akım) yönünü periyodik olarak değiştirir; şebeke elektriği AC’dir.||Adaptörler AC’yi, cihazın ihtiyaç duyduğu DC gerilime çevirir.",
+     "keywords": "dc ac doğru alternatif adaptör usb pil şebeke"
+    }
+   ]
+  },
+  {
+   "id": "devre",
+   "title": "Devre Türleri",
+   "lead": "Bileşenlerin bağlanma biçimleri.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Seri bağlantı",
+     "tag": "",
+     "text": "Bileşenler tek bir yol üzerinde ardışık bağlanır. Aynı akım tüm bileşenlerden geçer; gerilim bileşenler arasında bölünür.||Bir bileşen koparsa devre tamamen kesilir.",
+     "keywords": "seri bağlantı akım bölünme kopma"
+    },
+    {
+     "title": "Paralel bağlantı",
+     "tag": "",
+     "text": "Bileşenlerin uçları ortak noktalara bağlanır. Her bileşende gerilim aynıdır; akım dallara bölünür.||Bir dal koparsa diğerleri çalışmaya devam eder. Ev prizleri paralel bağlıdır.",
+     "keywords": "paralel bağlantı gerilim dal priz ev"
+    },
+    {
+     "title": "Kısa devre",
+     "tag": "",
+     "text": "Direncin çok küçük olduğu veya iki iletkenin doğrudan birbirine temas ettiği durumdur. Akım çok artar; kablo ısınır, sigorta atar, pil veya adaptör hasar görebilir.",
+     "keywords": "kısa devre sigorta ısınma tehlike"
+    },
+    {
+     "title": "Açık devre",
+     "tag": "",
+     "text": "Akım yolunun kopuk olduğu durumdur. Akım akmaz; bağlantıları ve lehim noktalarını kontrol etmek gerekir.",
+     "keywords": "açık devre kopuk akım yok kontrol"
+    }
+   ]
+  },
+  {
+   "id": "bilesenler",
+   "title": "Pasif Bileşenler",
+   "lead": "Enerji üretmeyen, sadece davranışını değiştiren parçalar.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Direnç",
+     "tag": "",
+     "text": "Akımı sınırlar, gerilimi böler, LED’lere ve sinyallere uygun seviyeleri sağlar. Değeri ohm (Ω) ile ölçülür.||Ayak uzunluğu bağlantıya ve yüze göre değişmez; yön fark etmez.",
+     "keywords": "direnç akım sınırlama gerilim bölücü led yön"
+    },
+    {
+     "title": "Kondansatör",
+     "tag": "",
+     "text": "Elektrik yükünü bir süre depolar. Değeri farad (F) ile ölçülür; genellikle µF, nF veya pF kullanılır.||Güç hattını yumuşatmak, gürültüyü filtrelemek ve zamanlama devrelerinde kullanılır. Elektrolitik kondansatörlerde (+) ve (−) bacakları vardır; ters takılırsa patlayabilir.",
+     "keywords": "kondansatör farad filtre elektrolitik kutup patlama"
+    },
+    {
+     "title": "Bobin (indüktör)",
+     "tag": "",
+     "text": "Tel sarılarak yapılır ve akım değişimine karşı çıkar. Manyetik alan depolar.||Güç kaynaklarında filtreleme, radyo devrelerinde seçim ve transformatörlerde kullanılır.",
+     "keywords": "bobin indüktör manyetik alan transformatör filtre"
+    },
+    {
+     "title": "Potansiyometre",
+     "tag": "",
+     "text": "Ayarlanabilir dirençtir. Ses kısma düğmesi bir potansiyometre örneğidir. Üç bacağı vardır: iki uç ve ortadaki kaydırıcı.",
+     "keywords": "potansiyometre ayarlanabilir ses düğme"
+    }
+   ]
+  },
+  {
+   "id": "yari",
+   "title": "Yarı İletken Elemanlar",
+   "lead": "Akımı tek yönde geçiren veya kontrol eden parçalar.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Diyot",
+     "tag": "",
+     "text": "Akımı yalnızca bir yönde geçirir. Anot (+) ve katot (−) uçları vardır; katot genellikle gövdede bir çizgiyle işaretlenir.||AC’yi DC’ye çevirmek (doğrultma) için kullanılır.",
+     "keywords": "diyot anot katot doğrultma tek yön"
+    },
+    {
+     "title": "LED",
+     "tag": "",
+     "text": "Işık yayan diyottur. Uzun bacak genellikle (+) anottur. LED’in yanması için bir direnç ile seri bağlanması gerekir; aksi halde aşırı akım LED’i bozar.",
+     "keywords": "led ışık yayan diyot direnç uzun bacak anot"
+    },
+    {
+     "title": "Transistör",
+     "tag": "",
+     "text": "Küçük bir akım veya gerilimle büyük bir akımı kontrol eden anahtar veya yükselteçtir. Üç bacağı vardır: taban (B), kollektör (C) ve emetör (E) (NPN ve PNP tipleri vardır).||Dijital devrelerde anahtar, analog devrelerde sinyal yükseltici olarak kullanılır.",
+     "keywords": "transistör npn pnp taban kollektör emetör anahtar yükselteç"
+    },
+    {
+     "title": "Entegre devre (IC)",
+     "tag": "",
+     "text": "Çok sayıda transistör, direnç ve diğer elemanın tek bir kılıfa yerleştirilmiş hâlidir. Zamanlayıcılar, mikrodenetleyiciler ve ses yükselteçleri birer entegredir.||Entegrenin bacak numarasını bulmak için üzerindeki çentik veya noktaya bakın; numaralandırma bu işaretten başlar.",
+     "keywords": "entegre ic mikrodenetleyici zamanlayıcı çentik bacak"
+    }
+   ]
+  },
+  {
+   "id": "olcum",
+   "title": "Ölçüm ve Test",
+   "lead": "Devreyi doğru incelemek için araçlar.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Multimetre",
+     "tag": "",
+     "text": "Gerilim (V), akım (A) ve direnci (Ω) ölçen çok amaçlı alettir. Süreklilik (bip) modu, kopuk iletkenleri bulmak için kullanılır.||Gerilim ölçerken probları paralel, akım ölçerken seri bağlayın. Akım ölçümünde yanlış modda probları bağlarsanız multimetrenin sigortası atabilir.",
+     "keywords": "multimetre ölçüm gerilim akım direnç süreklilik sigorta"
+    },
+    {
+     "title": "Osiloskop",
+     "tag": "",
+     "text": "Gerilimin zamanla değişimini ekranda gösterir. Sinyalleri incelemek ve sorun gidermek için kullanılır.",
+     "keywords": "osiloskop sinyal dalga ekran"
+    },
+    {
+     "title": "Ölçüm yaparken dikkat",
+     "tag": "",
+     "text": "Ölçüm aralığını (örn. 20 V) tahmini değerden yüksek seçin. Problari tutarken metal uçlara dokunmayın. Enerjili devrede bileşen değiştirmeyin.",
+     "keywords": "ölçüm aralık dikkat prob enerji"
+    }
+   ]
+  },
+  {
+   "id": "renk",
+   "title": "Direnç Renk Kodları",
+   "lead": "Dirençlerin üzerindeki renk bantlarını okuma.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Renk tablosu",
+     "tag": "",
+     "text": "Siyah 0, Kahverengi 1, Kırmızı 2, Turuncu 3, Sarı 4, Yeşil 5, Mavi 6, Mor 7, Gri 8, Beyaz 9.||Çarpan: Siyah ×1, Kahverengi ×10, Kırmızı ×100, Turuncu ×1 k, Sarı ×10 k, Yeşil ×100 k, Mavi ×1 M.||Tolerans: Altın ±5 %, Gümüş ±10 %, Kahverengi ±1 %.",
+     "keywords": "renk kodu bant tablo siyah kahverengi kırmızı altın tolerans"
+    },
+    {
+     "title": "Örnek okuma",
+     "tag": "",
+     "text": "Kırmızı, Mor, Kahverengi, Altın bantlı direnç: 2, 7, ×10, ±5 % → 270 Ω ±%5.||Okurken tolerans bandını (genellikle altın veya gümüş) sağ tarafa alın.",
+     "keywords": "örnek okuma 270 ohm kırmızı mor kahverengi altın"
+    }
+   ]
+  },
+  {
+   "id": "lehim",
+   "title": "Lehimleme ve Montaj",
+   "lead": "Bileşenleri kartta kalıcı hâle getirmek.",
+   "type": "n",
+   "items": [
+    {
+     "title": "Lehim ve lehim teli",
+     "tag": "",
+     "text": "Kalay-kurşun veya kurşunsuz lehim teli kullanılır. Kurşunlu lehimden sonra ellerinizi yıkayın ve iyi havalandırılmış bir ortamda çalışın.||Lehim yapılacak yüzeyler temiz ve yağsız olmalıdır.",
+     "keywords": "lehim kalay kurşun havalandırma temizlik"
+    },
+    {
+     "title": "Doğru lehim tekniği",
+     "tag": "",
+     "text": "Havyayı hem pede hem bacağa aynı anda değdirin, birkaç saniye ısıtın, sonra lehim telini pede değdirin. Lehim akıp pedi ve bacağı sararsa işlem tamamdır; havyayı çekin.||Uzun süre ısıtmak pedi kaldırabilir veya bileşeni bozabilir.",
+     "keywords": "lehim tekniği havya ped bacak sıcaklık soğuk lehim"
+    },
+    {
+     "title": "Soğuk lehim",
+     "tag": "",
+     "text": "Lehim mat, parçalı veya topak şeklinde görünüyorsa ve bağlantı zayıfsa soğuk lehim oluşmuştur. Yeniden ısıtıp parlak bir birleşme oluşturun.",
+     "keywords": "soğuk lehim mat topak zayıf bağlantı"
+    },
+    {
+     "title": "Breadboard (deneme tahtası)",
+     "tag": "",
+     "text": "Lehim yapmadan devre kurmaya yarayan tahtadır. Delikler içeride metal şeritlerle bağlıdır; bileşenler bacaklarıyla deliklere takılır.||Denemeler için idealdir, ancak kalıcı kullanım için uygun değildir.",
+     "keywords": "breadboard deneme tahtası lehimsiz delik şerit"
+    }
+   ]
+  },
+  {
+   "id": "sss",
+   "title": "Sık Sorulan Sorular",
+   "lead": "Kısa ve net cevaplar.",
+   "type": "f",
+   "items": [
+    {
+     "title": "Hangi malzemeyle başlamalıyım?",
+     "tag": "",
+     "text": "Bir multimetre, bir breadboard, dirençler, LED’ler, kablo ve bir pil ile başlamak yeterlidir. Lehim için havya ve lehim teli eklenebilir.",
+     "keywords": "başlangıç malzeme multimetre breadboard"
+    },
+    {
+     "title": "Neden direnç kullanmalıyım?",
+     "tag": "",
+     "text": "LED ve benzeri bileşenler belirli bir akımdan fazlasını kaldıramaz. Direnç akımı güvenli bir seviyede tutar.",
+     "keywords": "neden direnç led akım sınırı"
+    },
+    {
+     "title": "Multimetre neden ölçmüyor?",
+     "tag": "",
+     "text": "Pil zayıf olabilir, problar doğru jaklara takılmamış olabilir veya ölçüm modu yanlış seçilmiş olabilir. Ayrıca sigorta atmış olabilir.",
+     "keywords": "multimetre ölçmüyor pil prob jak sigorta mod"
+    },
+    {
+     "title": "Dirençleri hangi değerlerde almalıyım?",
+     "tag": "",
+     "text": "Başlangıç için 220 Ω, 1 kΩ, 4,7 kΩ ve 10 kΩ değerleri yaygın olarak kullanılır. Ellerinizde değerleri ayırt etmek için renk tablosunu kullanın.",
+     "keywords": "direnç değer 220 1k 10k başlangıç"
+    }
+   ]
+  },
+  {
+   "id": "sozluk",
+   "title": "Terimler Sözlüğü",
+   "lead": "Sık kullanılan terimler, A’dan Z’ye.",
+   "type": "g",
+   "items": [
+    {
+     "title": "Akım",
+     "tag": "",
+     "text": "Birim zamanda iletkenden geçen yük miktarı; birimi amperdir (A).",
+     "keywords": "amper a"
+    },
+    {
+     "title": "Anot",
+     "tag": "",
+     "text": "Diyotun veya LED’in pozitif (+) ucu.",
+     "keywords": "pozitif diyot led"
+    },
+    {
+     "title": "Direnç",
+     "tag": "",
+     "text": "Akıma karşı gösterilen zorluk; birimi ohm’dur (Ω).",
+     "keywords": "ohm omega"
+    },
+    {
+     "title": "Gerilim",
+     "tag": "",
+     "text": "İki nokta arasındaki potansiyel farkı; birimi volttur (V).",
+     "keywords": "volt v potansiyel"
+    },
+    {
+     "title": "Katot",
+     "tag": "",
+     "text": "Diyotun veya LED’in negatif (−) ucu.",
+     "keywords": "negatif diyot led"
+    },
+    {
+     "title": "Kısa devre",
+     "tag": "",
+     "text": "Akım yolunun çok düşük dirençle kapanması; aşırı akım ve ısınmaya yol açar.",
+     "keywords": "kısa devre aşırı akım"
+    },
+    {
+     "title": "Lehim",
+     "tag": "",
+     "text": "Metal parçaları birleştirmek için ergitilerek kullanılan alaşım.",
+     "keywords": "lehim alaşım birleştirme"
+    },
+    {
+     "title": "Ohm yasası",
+     "tag": "",
+     "text": "Gerilim, akım ile direncin çarpımına eşittir (V = I × R).",
+     "keywords": "ohm yasası formül"
+    },
+    {
+     "title": "Pad (ped)",
+     "tag": "",
+     "text": "Bileşen bacağının lehimlendiği, kartın üzerindeki bakır alan.",
+     "keywords": "ped pad bakır lehim"
+    },
+    {
+     "title": "Transistör",
+     "tag": "",
+     "text": "Akımı kontrol eden veya yükselten üç bacaklı yarı iletken eleman.",
+     "keywords": "transistör yarı iletken anahtar"
+    }
+   ]
+  }
+ ]
+}
